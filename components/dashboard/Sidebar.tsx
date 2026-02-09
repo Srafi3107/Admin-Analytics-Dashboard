@@ -28,7 +28,7 @@ export function Sidebar() {
     const { isSidebarOpen, setSidebarOpen, toggleSidebar } = useDashboardStore();
 
     React.useEffect(() => {
-        // Open sidebar by default on large screens
+
         if (window.innerWidth >= 1024) {
             setSidebarOpen(true);
         }
@@ -36,7 +36,7 @@ export function Sidebar() {
 
     return (
         <>
-            {/* Mobile Overlay */}
+
             {isSidebarOpen && (
                 <div
                     className="fixed inset-0 z-40 bg-black/60 backdrop-blur-sm md:hidden"
@@ -44,7 +44,7 @@ export function Sidebar() {
                 />
             )}
 
-            {/* Sidebar */}
+
             <aside
                 className={cn(
                     "fixed inset-y-0 left-0 z-50 flex w-64 flex-col bg-white text-zinc-900 transition-all duration-300 ease-in-out shadow-xl dark:bg-zinc-900 dark:text-zinc-100",
@@ -76,7 +76,7 @@ export function Sidebar() {
                     </button>
                 </div>
 
-                {/* Navigation */}
+
                 <div className="flex-1 overflow-y-auto py-6">
                     <nav className="grid gap-2 px-3">
                         {navItems.map((item, index) => {
@@ -105,7 +105,7 @@ export function Sidebar() {
                                         {item.name}
                                     </span>
 
-                                    {/* Hover visual for non-active items */}
+
                                     {!isActive && (
                                         <div className="absolute inset-0 bg-gradient-to-r from-zinc-100/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity dark:from-white/5" />
                                     )}
@@ -115,7 +115,7 @@ export function Sidebar() {
                     </nav>
                 </div>
 
-                {/* Footer */}
+
                 <div className="mt-auto border-t border-zinc-200 p-4 dark:border-zinc-800">
                     <nav className="grid gap-1">
                         <Link

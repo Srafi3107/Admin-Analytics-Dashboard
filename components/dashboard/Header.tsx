@@ -20,7 +20,7 @@ export function Header() {
 
             <div className="flex-1">
                 <span className="text-lg font-semibold md:hidden">AdminDash</span>
-                {/* Breadcrumbs or Title could go here for Desktop */}
+                {}
                 <h1 className="hidden md:block text-xl font-semibold text-zinc-800 dark:text-white">Overview</h1>
             </div>
 

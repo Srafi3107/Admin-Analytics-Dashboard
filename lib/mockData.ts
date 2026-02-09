@@ -1,5 +1,4 @@
 export const getMockStats = (dateRange: string, userType: string) => {
-    // Simulate different data based on filters
     const multiplier = dateRange === '30days' ? 2 : dateRange === '12months' ? 10 : 1;
     const userMultiplier = userType === 'premium' ? 1.5 : userType === 'enterprise' ? 3 : 1;
 
@@ -36,7 +35,6 @@ export const getMockStats = (dateRange: string, userType: string) => {
 };
 
 export const getMockRevenue = (dateRange: string) => {
-    // Generate simple data
     const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
     if (dateRange === '7days') {
         const days = ['Mon', 'Tue', 'Wed', 'Thu', 'Fri', 'Sat', 'Sun'];
@@ -55,8 +53,6 @@ export const getMockOrders = (dateRange: string) => {
 };
 
 export const getMockUserDist = (userType: string) => {
-    // If filtering by specific user type, maybe show sub-segments? 
-    // For simplicity, just return static distribution but maybe vary values slightly
     return [
         { name: 'Free', value: 400 + Math.floor(Math.random() * 100) },
         { name: 'Premium', value: 300 + Math.floor(Math.random() * 100) },

@@ -4,7 +4,7 @@ interface DashboardState {
     isSidebarOpen: boolean;
     toggleSidebar: () => void;
     setSidebarOpen: (isOpen: boolean) => void;
-    // Filters (mock data for now)
+
     dateRange: '7days' | '30days' | '12months';
     setDateRange: (range: '7days' | '30days' | '12months') => void;
     userType: 'all' | 'free' | 'premium' | 'enterprise';
@@ -12,7 +12,7 @@ interface DashboardState {
 }
 
 export const useDashboardStore = create<DashboardState>((set) => ({
-    isSidebarOpen: false, // Default closed (mobile-first), open on desktop via effect
+    isSidebarOpen: false,
     toggleSidebar: () => set((state) => ({ isSidebarOpen: !state.isSidebarOpen })),
     setSidebarOpen: (isOpen) => set({ isSidebarOpen: isOpen }),
 

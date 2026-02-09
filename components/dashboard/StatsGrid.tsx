@@ -72,7 +72,7 @@ export function StatsGrid() {
         <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-4">
             {stats.map((metric: any, index) => (
                 <Card key={index} className="border-l-4" style={{ borderLeftColor: metric.color.split(' ')[0].replace('text-', '').replace('-600', '') }}>
-                    {/* The style prop hack above is a bit messy, let's just accept the border-l without dynamic color for now or use CLS correctly below */}
+                    {}
                     <CardHeader className="flex flex-row items-center justify-between space-y-0 pb-2">
                         <CardTitle className="text-sm font-medium text-zinc-600 dark:text-zinc-400">
                             {metric.title}

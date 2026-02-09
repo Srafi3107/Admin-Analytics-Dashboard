@@ -62,3 +62,25 @@ A mobile-first approach is used with Tailwind CSS grid and flexbox, ensuring the
 - **User Personas**: The dashboard is designed for administrative users who require a high-level overview of sales, revenue, and user demographics.
 - **Environment**: The project assumes a modern browser environment supporting CSS Grid and Flexbox.
 - **Authentication**: Current implementation assumes the user is authenticated (authentication flow is not yet implemented in this version).
+
+## 🌐 Deploying to Netlify
+
+To take this dashboard live on Netlify, follow these steps:
+
+### Option 1: Via Netlify Dashboard (Recommended)
+
+1.  **Push to Git**: Ensure your code is pushed to a Git repository (GitHub, GitLab, or Bitbucket).
+2.  **Import to Netlify**:
+    *   Log in to [Netlify](https://app.netlify.com/).
+    *   Click **Add new site** > **Import an existing project**.
+    *   Select your Git provider and the repository.
+3.  **Configure Settings**: Netlify will auto-detect Next.js and apply these settings:
+    *   **Build command**: `npm run build`
+    *   **Publish directory**: `.next`
+4.  **Deploy**: Click **Deploy site**.
+
+### Option 2: Via Netlify CLI
+
+1.  Install the CLI: `npm install -g netlify-cli`
+2.  Run `netlify deploy` and follow the interactive prompts.
+3.  For production, run `netlify deploy --prod`.

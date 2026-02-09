@@ -19,8 +19,6 @@ export default function DashboardLayout({
             <div
                 className={cn(
                     "flex flex-col min-h-screen transition-all duration-300 ease-in-out",
-                    // Mobile: No margin (Sidebar is overlay or hidden)
-                    // Desktop (md+): Margin based on sidebar state
                     isSidebarOpen ? "md:ml-64" : "md:ml-[70px]"
                 )}
             >

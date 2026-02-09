@@ -8,7 +8,7 @@ export async function GET(request: Request) {
 
     const data = getMockStats(dateRange, userType);
 
-    // Simulate delay
+
     await new Promise(resolve => setTimeout(resolve, 500));
 
     return NextResponse.json(data);
